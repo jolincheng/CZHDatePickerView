@@ -15,6 +15,9 @@
 		59C4A6B61FC2CB24004FEF42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C4A6B51FC2CB24004FEF42 /* main.m */; };
 		59C4A6C01FC2CB25004FEF42 /* CZHDatePickerViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C4A6BF1FC2CB25004FEF42 /* CZHDatePickerViewTests.m */; };
 		59C4A6CB1FC2CB25004FEF42 /* CZHDatePickerViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C4A6CA1FC2CB25004FEF42 /* CZHDatePickerViewUITests.m */; };
+		59C4A6DB1FC2CBDF004FEF42 /* CZHDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C4A6DA1FC2CBDF004FEF42 /* CZHDatePickerView.m */; };
+		59C4A6DF1FC2CDF7004FEF42 /* UIView+CZHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C4A6DE1FC2CDF7004FEF42 /* UIView+CZHExtension.m */; };
+		59C4A6E21FC2CE7E004FEF42 /* UIButton+CZHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C4A6E11FC2CE7E004FEF42 /* UIButton+CZHExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,13 @@
 		59C4A6C61FC2CB25004FEF42 /* CZHDatePickerViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CZHDatePickerViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59C4A6CA1FC2CB25004FEF42 /* CZHDatePickerViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZHDatePickerViewUITests.m; sourceTree = "<group>"; };
 		59C4A6CC1FC2CB25004FEF42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59C4A6D91FC2CBDF004FEF42 /* CZHDatePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZHDatePickerView.h; sourceTree = "<group>"; };
+		59C4A6DA1FC2CBDF004FEF42 /* CZHDatePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZHDatePickerView.m; sourceTree = "<group>"; };
+		59C4A6DC1FC2CCB3004FEF42 /* DatePickerHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatePickerHeader.h; sourceTree = "<group>"; };
+		59C4A6DD1FC2CDF7004FEF42 /* UIView+CZHExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CZHExtension.h"; sourceTree = "<group>"; };
+		59C4A6DE1FC2CDF7004FEF42 /* UIView+CZHExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CZHExtension.m"; sourceTree = "<group>"; };
+		59C4A6E01FC2CE7E004FEF42 /* UIButton+CZHExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+CZHExtension.h"; sourceTree = "<group>"; };
+		59C4A6E11FC2CE7E004FEF42 /* UIButton+CZHExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CZHExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +111,7 @@
 		59C4A6A51FC2CB24004FEF42 /* CZHDatePickerView */ = {
 			isa = PBXGroup;
 			children = (
+				59C4A6D81FC2CB9D004FEF42 /* CZHDatePickerView */,
 				59C4A6A61FC2CB24004FEF42 /* AppDelegate.h */,
 				59C4A6A71FC2CB24004FEF42 /* AppDelegate.m */,
 				59C4A6A91FC2CB24004FEF42 /* ViewController.h */,
@@ -130,6 +141,20 @@
 				59C4A6CC1FC2CB25004FEF42 /* Info.plist */,
 			);
 			path = CZHDatePickerViewUITests;
+			sourceTree = "<group>";
+		};
+		59C4A6D81FC2CB9D004FEF42 /* CZHDatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				59C4A6D91FC2CBDF004FEF42 /* CZHDatePickerView.h */,
+				59C4A6DA1FC2CBDF004FEF42 /* CZHDatePickerView.m */,
+				59C4A6DC1FC2CCB3004FEF42 /* DatePickerHeader.h */,
+				59C4A6DD1FC2CDF7004FEF42 /* UIView+CZHExtension.h */,
+				59C4A6DE1FC2CDF7004FEF42 /* UIView+CZHExtension.m */,
+				59C4A6E01FC2CE7E004FEF42 /* UIButton+CZHExtension.h */,
+				59C4A6E11FC2CE7E004FEF42 /* UIButton+CZHExtension.m */,
+			);
+			path = CZHDatePickerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +224,7 @@
 				TargetAttributes = {
 					59C4A6A21FC2CB24004FEF42 = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					59C4A6BA1FC2CB25004FEF42 = {
 						CreatedOnToolsVersion = 9.1;
@@ -267,7 +292,10 @@
 			files = (
 				59C4A6AB1FC2CB24004FEF42 /* ViewController.m in Sources */,
 				59C4A6B61FC2CB24004FEF42 /* main.m in Sources */,
+				59C4A6DB1FC2CBDF004FEF42 /* CZHDatePickerView.m in Sources */,
 				59C4A6A81FC2CB24004FEF42 /* AppDelegate.m in Sources */,
+				59C4A6DF1FC2CDF7004FEF42 /* UIView+CZHExtension.m in Sources */,
+				59C4A6E21FC2CE7E004FEF42 /* UIButton+CZHExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,11 +458,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CZHDatePickerView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = baiyoushang.CZHDatePickerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -443,11 +473,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CZHDatePickerView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = baiyoushang.CZHDatePickerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

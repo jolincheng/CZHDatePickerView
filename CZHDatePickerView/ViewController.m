@@ -7,18 +7,39 @@
 //
 
 #import "ViewController.h"
+#import "CZHDatePickerView.h"
+#import "DatePickerHeader.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *haveDateLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *noDateLabel;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    
+}
+- (IBAction)haveDateClick:(id)sender {
+    CZHWeakSelf(self);
+    [CZHDatePickerView sharePickerViewWithCurrentDate:self.haveDateLabel.text DateBlock:^(NSString *dateString) {
+        CZHStrongSelf(self);
+        self.haveDateLabel.text = dateString;
+    }];
+    
 }
 
+- (IBAction)noDateClick:(id)sender {
+    CZHWeakSelf(self);
+    [CZHDatePickerView sharePickerViewWithCurrentDate:@"" DateBlock:^(NSString *dateString) {
+        CZHStrongSelf(self);
+        self.noDateLabel.text = dateString;
+    }];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
