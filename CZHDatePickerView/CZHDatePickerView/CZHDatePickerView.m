@@ -100,7 +100,7 @@ static CZHDatePickerView *_view = nil;
     NSDate *maxDate = [NSDate date];
     self.datePickerView.maximumDate = maxDate;
     
-    if (self.currentDate.length <=0) {//如果没有初始时间用当前时间
+    if (self.currentDate.length <=0 || [self.currentDate containsString:@"00"]) {//如果没有初始时间用当前时间
         self.datePickerView.date = maxDate;
     } else {//用传入的时间代替
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
